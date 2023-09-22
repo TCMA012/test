@@ -1,0 +1,14 @@
+https://angular.io/guide/testing
+
+ng test
+
+
+C:\Angular15\testing\testing\src\app\model
+user.service.ts
+
+  updateHero(hero: Hero): Observable<any> {
+    return this.http.put(this.heroesUrl, hero, httpOptions)
+        .pipe(
+            tap(_ => this.log(`updated hero id=${hero.id}`)),
+            catchError(this.handleError<any>('updateHero')));
+  }
